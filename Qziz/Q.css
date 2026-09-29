@@ -1,0 +1,93 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+.one_1 {
+  width: 50%;
+  padding: 10px;
+  margin-top: 200px;
+  border: 2px solid red;
+  border-radius: 5px;
+  box-shadow: 2px 2px 3px black, -2px -2px 3px black;
+background-color: rgb(244, 240, 238);
+}
+.heading_1,
+.heading_2 {
+  padding: 10px;
+  font-family: "Times New Roman", Times, serif;
+}
+.option_btm {
+  padding:0px 9px 10px 9px;
+ 
+}
+
+li{
+  list-style: none;
+  margin-top: 5px;
+  width: 40%;
+  padding: 4px 0px 5px 20px;
+  border: 1px solid sandybrown ;
+  border-radius: 10px;
+  
+}
+
+label{
+  padding-left:5px;
+  user-select: none;
+}
+.next_btm {
+  padding: 10px;
+  padding-top: 2px;
+}
+
+.Nxt,.prev {
+  width: 10%;
+  padding: 5px;
+  margin-left: 5px;
+  color: white;
+  background-color: rgb(32, 205, 32);
+  border: none;
+  border-radius: 5px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: large;
+}
+
+label:hover {
+  background-color: yellow;
+  transform: scale(3);
+}
+
+.lastdiv{
+  height: 50px;
+  margin-top: 10px;
+  text-align: center;
+}
+.playbtn{
+  color: white;
+  height: 40px;
+  padding: 5px;
+  margin-top:15px;
+  background-color:red ;
+  border: 1px solid black;
+  border-radius: 10px;
+ text-align: center;
+}
+
+.Nxt:hover,.prev:hover {
+  font-size: large;
+  transform: scale(0.9);
+}
+
+.Nxt:active,.prev:hover{
+  box-shadow: 2px 2px 3px yellow , -2px  -2px 3px yellow;
+}
+
+.label.selected{
+   background-color: #0f1011;   
+  font-weight: bold;
+}

@@ -1,0 +1,12 @@
+
+{
+
+    "name" : "IamIronMan",
+    "Iscelebrity" : true,
+    "adress" : {
+        "USA":"Newwork",
+        "Asia":"Nepal",
+        "Africa" :"Egypt"
+    }
+     
+}

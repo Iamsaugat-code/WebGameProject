@@ -1,0 +1,111 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+:root {
+  --bg-main: #464646;
+  --bg-card: #2d2727;
+  --border-color: #efc745;
+}
+body {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #474747;
+  gap: 100px;
+}
+#selection_box {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+.heading_div {
+  padding: 1rem 1rem 1rem 0rem;
+  font-size: larger;
+}
+.card {
+  position: relative;
+  transition: all 0.2s linear;
+  transform-style: preserve-3d;
+}
+
+.card,
+.back-card,
+.front-card {
+  height: 7rem;
+  width: 7rem;
+}
+
+.front-card,
+.back-card {
+  position: absolute;
+  backface-visibility: hidden;
+}
+.front-card {
+  background-color: #efc745;
+  background-size: contain;
+  border-radius: 0.6rem;
+  /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+}
+
+.back-card {
+  transform: rotateY(180deg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.card_selected {
+  transform: rotateY(180deg);
+}
+.two_setcolor .front-card {
+  background-color: #2d2d2d;
+}
+
+.result_div{
+  height: 200px;
+  width: 200px;
+  padding: 20px;
+  border: 2px solid white;
+  background: yellow;
+  border-radius: 5%;
+  box-shadow: 2px 2px 3px red, -2px -2px 3px red;
+  font-family: 'Times New Roman', Times, serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.result_2{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game_O{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.play{
+  padding: 8px;
+ position: absolute;
+ margin-left: 16px;
+  color: white;
+  background-color: rgb(213, 11, 11);
+  border: none;
+  border-radius: 7px;
+
+}
+#link{
+  color: white;
+  text-decoration: none;
+  font-size: medium;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="BQuiz.css" />
+  </head>
+  <body>
+
+    <main>
+    <div class="box_1">
+      <header>
+        <div class="heading">
+          <h2>Guess the number between 1 - 100</h2>
+        </div>
+      </header>
+        <section>
+        <div class="image_box">
+            <img src="q.png" alt="Play game image" id="image_box">
+        </div>
+        <div class="text">
+            <h4> Select The Diffculty </h4>
+        </div>
+        <div class="botton_box">
+            <button id="bot_1"> Easy : 10 Attempts</button>
+            <button id="bot_2"> Hard : 5 Attempts</button>
+        </div>
+    </section>
+    </div>
+
+    <div class="box_2">
+        <div class="first_div">
+       <button id="bot_3"> <a href="BQuiz.html"> New Game </a></button>
+            <h2 id="h2"> Your Guess</h2>
+            <input type="number" placeholder="Enter Your Guess" id="inputbox">
+             </div>
+            <div class="result_div">
+                <h5 id="span">Number of Pervious Attempts </h5>
+                <span class="span1"> 0 </span>
+            </div>
+            <div class="result_div2"> 
+                <h5> Number of Pervious Guess </h5>
+                <span class="span2"> 0 </span>
+            </div>
+            </section>
+          </div>
+        </main>
+    <script src="BQuiz.js"></script>
+  </body>
+</html>

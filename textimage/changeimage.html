@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+
+    *{
+        padding: 0px;
+        margin: 0px;
+    }
+    body{
+        display: flex;
+        justify-content: center;
+    }
+    .first_box{
+        margin-top: 150px;
+        padding-bottom: 150px;
+    }
+    h2{
+        padding: 15px 15px 20px 0px;
+    }
+    select{
+        padding: 5px;
+    }
+    .back{
+        padding: 10px 10px 10px 0px;
+    }
+    .back.input{
+        padding: 0px;
+        border: none;
+    }
+    .image{
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+    }
+    textarea{
+        margin-top: 15px;
+        padding:2px 2px 2px 8px;
+        
+    }
+    #myinput{
+        margin-top: 10px;
+        height: 15px;
+        width: 150px;
+    }
+    button{
+        margin-left: 525px;
+        padding: 5px;
+        width: 60px;
+        color: white;
+        background-color: red;
+        border: none;
+        border-radius: 7px;
+        position: relative;
+        top: -25px;
+    }
+    button:active{
+        box-shadow: 1px 1px 2px blue , -1px -1px 2px blue ;
+    }
+    /* .inputext{
+        width: 100%;
+        display: flex;
+    } */
+
+  </style>
+  <body>
+    <div class="first_box">
+      <div>
+        <h2>Image Generate Websystem :</h2>
+      </div>
+      <section>
+        <div class="section_box">
+          <label for="selectimage">Select the Image size : </label>
+          <select name="" id="selectimage">
+            <option value="150x50">VerySmall (150x50)</option>
+            <option value="200x200">MediumSize (200x200)</option>
+            <option value="300x150">Mediun (300x150)</option>
+            <option value="400x400">LargeSqaure (400x400)</option>
+            <option value="600x150">Large (600x150)</option>
+            <option value="800x600">X-Large (800x600)</option>
+            <option value="1920x1080">Full HD (1920x1080)</option>
+          </select>
+        </div>
+        <div class="inputfield">
+            <labelfor=""> Enter The Text : </label><input type="text" id="myinput" style="width: 150px;">
+        </div>
+        <div class="back">
+          <label for="inputcolor"> Background-color : </label>
+          <input type="color" value="#98bc62" id="inputcolor" class="back_1" />
+        </div>
+        <div class="back">
+          <label for="inputtext">Text_Color : </label>
+          <input type="color" value="#2C5F2D" id="inputtext" class="back_2" />
+        </div>
+        <div class="image">
+          <img src="" referrerpolicy="no-referrer" alt="Image" />
+        </div>
+        <div class="inputext">
+          <label for="inputtype"> Link : </label
+          ><textarea rows="1" cols="65" id="inputtype">
+            link will be available here ! </textarea>
+        </div>
+        <div class="but">
+      <button> Copy</button></div>
+      </section>
+    </div>
+
+    <script>
+
+        let selectbtn = document.querySelector("#selectimage");
+        let backgroundbtn = document.querySelector(".back_1");
+        let textbtn = document.querySelector(".back_2");
+        let imgbtn = document.querySelector("img");
+        let myinput = document.querySelector("#myinput");
+        let copybtn = document.querySelector("button");
+
+        let obj= {};
+        let textArea = document.querySelector("textarea");
+
+        const changeimage = ()=>{
+            let backgroundvalue = backgroundbtn.value.replace("#","");
+            obj.back = backgroundbtn.value.replace("#","");
+            obj.text = textbtn.value.replace("#","");
+            obj.mytext = myinput.value;
+          let url = `https://dummyimage.com/${selectbtn.value}/${obj.back}/${obj.text}/&text=${obj.mytext.split(" ").join("+")}`;
+          imgbtn.src = url;
+          textArea.value = url;
+        }
+
+        selectbtn.addEventListener("change",changeimage);
+        backgroundbtn.addEventListener("change",changeimage);
+        textbtn.addEventListener("change",changeimage);
+        
+        copybtn.addEventListener("click",()=>{
+        navigator.clipboard.writeText(textArea.value);
+        });
+       
+    </script>
+  </body>
+</html>
